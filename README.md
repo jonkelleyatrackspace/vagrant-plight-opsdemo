@@ -3,8 +3,12 @@ Simple scripts to use vagrant to test out a plight install.
 
 ## Overview
 
-Develop your puppet modules & features like a human being!  No puppet master required.  Cut the strings!
+This will install a loadbalancer listening at http://10.10.10.11:5000
+```vagrant ssh nginx-n01.localdomain```
+or
+```vagrant ssh nginx-n02.locald.omain```
 
+and ```sudo plight disable``` to demonstrate health monitoring to pull nodes out of rotation. This can be done with F5's as well.
 
 ## Prerequisite
 
