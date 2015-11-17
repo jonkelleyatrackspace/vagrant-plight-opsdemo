@@ -1,0 +1,12 @@
+---
+  nodes:
+    - hostname: loadbalancer.localdomain
+      guestport: 80
+      hostport: 9990
+    - hostname: nginx-n01.localdomain
+      guestport: 3000
+      hostport: 9991
+    - hostname: nginx-n02.localdomain
+      guestport: 3000
+      hostport: 9992
+  network_prefix: '10.10.10'

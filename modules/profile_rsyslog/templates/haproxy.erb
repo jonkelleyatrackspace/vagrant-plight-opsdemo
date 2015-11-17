@@ -1,0 +1,30 @@
+# This file is managed by Puppet, changes may be overwritten
+# File is managed by puppet
+
+# Load UDP module
+$ModLoad imudp
+
+# Load TCP module
+$ModLoad imtcp
+
+
+
+#
+# Use traditional timestamp format.
+#
+$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat
+
+
+# Switch back to default ruleset
+$RuleSet RSYSLOG_DefaultRuleset
+
+$InputUDPServerBindRuleset remote
+$UDPServerRun 514
+$UDPServerAddress 127.0.0.1
+
+#$InputTCPServerBindRuleset remote
+#$InputTCPServerRun 514
+
+# Cool stuff
+local2.*                       /srv/log/haproxy.log
+
